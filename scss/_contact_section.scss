@@ -1,0 +1,43 @@
+section#contact {
+    background-position: center;
+    background-repeat: no-repeat;
+    .form-group {
+        margin-bottom: 25px;
+        input,
+        textarea {
+            background-color: #eee;
+            border: 1px solid #eee;
+            color: $gray-light;
+            padding: 20px;
+        }
+        input.form-control {
+            height: auto;
+        }
+        textarea.form-control {
+            height: 236px;
+        }
+    }
+    .form-control:focus {
+        border-color: $theme-primary;
+        box-shadow: none;
+        background-color: #eee;
+    }
+    ::-webkit-input-placeholder {
+       color: $gray-light;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+       color: $gray-light;
+    }
+    ::-moz-placeholder {  /* Firefox 19+ */
+       color: $gray-light;
+    }
+    :-ms-input-placeholder {
+       color: $gray-light;
+    }
+    .text-danger {
+        color: $theme-danger;
+    }
+    .submit {
+        margin-bottom: 2em;
+    }
+}

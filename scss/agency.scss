@@ -1,0 +1,138 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+// Global Components
+
+body {
+    overflow-x: hidden;
+    @include body-font;
+}
+
+.text-muted {
+    line-height: 2em;
+    letter-spacing: .05em;
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 0 1em;
+    color: $gray-light;
+}
+
+.text-primary {
+    color: $theme-primary;
+    font-size: 1.75em;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+p.large {
+    font-size: 16px;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+    outline: none;
+}
+
+a {
+    color: $theme-primary;
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active {
+    color: darken($theme-primary, 10%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @include heading-font;
+    font-weight: 700;
+}
+
+.img-centered {
+    margin: 0 auto;
+}
+
+.bg-light-gray {
+    background-color: $gray-lighter;
+}
+
+.bg-darkest-gray {
+    background-color: $gray-darker;
+}
+
+// Restyled Primary Buttons
+
+.btn-primary {
+    @include button-variant(white, $theme-primary, $theme-primary);
+    @include heading-font;
+    font-weight: 700;
+}
+
+.btn-xl {
+    @include button-variant(white, $theme-primary, $theme-primary);
+    @include heading-font;
+    font-weight: 700;
+    border-radius: 0;
+    font-size: 18px;
+    padding: 20px 40px;
+}
+
+.btn-xl-go-ahead {
+  position: absolute;
+  bottom: -1.75em;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  font-weight: 100;
+  max-width: 250px;
+  -webkit-box-shadow: 0px 0px 0px 5px rgba(231,76,60,0.5);
+  -moz-box-shadow: 0px 0px 0px 5px rgba(231,76,60,0.5);
+  box-shadow: 0px 0px 0px 5px rgba(231,76,60,0.5);
+}
+
+// Global Section Styles
+
+section {
+    padding: 50px 0;
+    h2.section-heading {
+        font-size: 40px;
+        margin-bottom: 15px;
+        font-weight: 100;
+        color: $theme-primary;
+    }
+    h3.section-subheading {
+        font-size: 16px;
+        @include serif-font;
+        text-transform: none;
+        font-style: italic;
+        font-weight: 400;
+        margin-bottom: 75px;
+    }
+}
+
+// Custom Navigation Bar
+
+@import "custom_nav_bar.scss";
+
+// Services Section
+
+@import "services_section.scss";
+
+// Portfolio Section
+
+@import "portfolio_section.scss";
+
+// Contact Section
+
+@import "contact_section.scss";
+
+// Footer
+
+@import "footer.scss";
